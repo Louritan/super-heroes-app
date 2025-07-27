@@ -1,0 +1,22 @@
+<div class="relative inline-block">
+  <ng-content></ng-content>
+  @if (show) {
+    <div
+      class="absolute z-50 px-3 py-1 rounded-md text-sm shadow-card transition-opacity duration-300"
+      [ngClass]="{
+        'bottom-full mb-2 left-1/2 -translate-x-1/2 transform': position === 'top',
+        'top-full mt-2 left-1/2 -translate-x-1/2 transform': position === 'bottom',
+        'right-full mr-2 top-1/2 -translate-y-1/2 transform': position === 'left',
+        'left-full ml-2 top-1/2 -translate-y-1/2 transform': position === 'right'
+      }"
+      style="
+        background-color: hsl(var(--popover));
+        color: hsl(var(--popover-foreground));
+        border-radius: var(--radius);
+        box-shadow: var(--shadow-card);
+      "
+    >
+      {{ text }}
+    </div>
+  }
+</div>

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NewPower } from './new-power';
+import { Loading } from './loading';
 
-describe('NewPower', () => {
-  let component: NewPower;
-  let fixture: ComponentFixture<NewPower>;
+describe('Loading', () => {
+  let component: Loading;
+  let fixture: ComponentFixture<Loading>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NewPower]
+      imports: [Loading]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(NewPower);
+    fixture = TestBed.createComponent(Loading);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

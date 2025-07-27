@@ -1,12 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ISuperPower, RegisterSuperPower } from '../types/super-power';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SuperPowersService {
-  private endpoint = 'https://localhost:7209/api/superpowers';
+  private endpoint = `${environment.API_URL}/superpowers`;
 
   constructor(private http: HttpClient) { }
 
@@ -15,6 +16,6 @@ export class SuperPowersService {
   }
 
   getSuperPowers() {
-    return this.http.get<{ superPowers: ISuperPower[] }>(`${this.endpoint}`);
+    return this.http.get<{ superPowers: ISuperPower[] } | null>(`${this.endpoint}`);
   }
 }

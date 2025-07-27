@@ -1,0 +1,113 @@
+@if (loading) {
+<app-loading></app-loading>
+} @else {
+<main class="flex flex-col items-center p-10">
+  <div class="w-full max-w-4xl">
+    <div class="flex items-center w-full justify-between">
+      <button type="button" class="flex items-center gap-2" (click)="goBack()">
+        <div class="h-4 w-4 arrow-icon"
+          style="mask: url('arrow-left.svg') no-repeat center; mask-size: contain; -webkit-mask: url('arrow-left.svg') no-repeat center; -webkit-mask-size: contain;">
+        </div>
+        Voltar
+      </button>
+      <div class="flex items-center justify-center">
+        <div class="bg-gradient-to-br from-blue-600 to-fuchsia-400 bg-clip-text text-transparent font-bold text-3xl">
+          Visualizar Herói
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <button class="flex items-center gap-2 border border-gray-600 hover:border-gray-500 px-4 py-2 rounded-lg font-medium transition-all duration-200"
+          (click)="openHeroForm()"
+        >
+          <lucide-icon [img]="Edit" class="h-4 w-4"></lucide-icon>
+          Editar
+        </button>
+        <button class="flex items-center gap-2 border border-red-900 hover:border-red-800 px-4 py-2 rounded-lg font-medium transition-all duration-200"
+          (click)="openDeleteModal()"
+        >
+          <lucide-icon [img]="Trash2" class="h-4 w-4"></lucide-icon>
+          Excluir
+        </button>
+      </div>
+    </div>
+
+    <div class="mt-6 flex flex-col items-start gradient-card rounded-xl p-6 shadow-md space-y-6"
+      style="border: 1px solid rgba(255, 255, 255, 0.1);">
+      <div class="flex items-center text-xl font-bold gap-2">
+        <lucide-icon [img]="Shield" class="h-6 w-6 text-blue-600"></lucide-icon>
+        Informações do Herói
+      </div>
+      <div class="w-full space-y-6">
+        <div class="flex w-full">
+          <div class="flex flex-col flex-1 gap-1">
+            <span class="flex items-center gap-2 text-sm text-muted-foreground">
+              <lucide-icon [img]="Users" class="h-4 w-4"></lucide-icon>
+              Nome Real
+            </span>
+            <p>{{ superHero.name }}</p>
+          </div>
+          <div class="flex flex-col flex-1 gap-1">
+            <span class="flex items-center gap-2 text-sm text-muted-foreground">
+              <lucide-icon [img]="Users" class="h-4 w-4"></lucide-icon>
+              Nome de Herói
+            </span>
+            <p>{{ superHero.heroName }}</p>
+          </div>
+        </div>
+
+        <div class="flex w-full">
+          <div class="flex flex-col flex-1 gap-1">
+            <span class="flex items-center gap-2 text-sm text-muted-foreground">
+              <lucide-icon [img]="Ruler" class="h-4 w-4"></lucide-icon>
+              Altura
+            </span>
+            <p>{{ superHero.height }}</p>
+          </div>
+          <div class="flex flex-col flex-1 gap-1">
+            <span class="flex items-center gap-2 text-sm text-muted-foreground">
+              <lucide-icon [img]="Weight" class="h-4 w-4"></lucide-icon>
+              Peso
+            </span>
+            <p>{{ superHero.weight }}</p>
+          </div>
+        </div>
+
+        <div class="flex w-full">
+          <div class="flex flex-col flex-1 gap-1">
+            <span class="flex items-center gap-2 text-sm text-muted-foreground">
+              <lucide-icon [img]="Calendar" class="h-4 w-4"></lucide-icon>
+              Idade
+            </span>
+            <p>{{ getAge() }} anos ({{ getBirthDate() }})</p>
+          </div>
+        </div>
+
+        <div class="h-px w-full my-4" style="background-color: hsl(var(--border))"></div>
+
+        <div class="flex gap-4 w-full">
+          <div class="flex flex-col flex-1 gap-2">
+            <span class="text-sm text-muted-foreground">Superpoderes ({{ superHero.superPowers.length }})</span>
+            <ul class="flex gap-2 p-0">
+              @for (item of superHero.superPowers; track $index) {
+              <app-tooltip [text]="item.description" position="top">
+                <li class="gradient-hero px-2 py-1 rounded-xl text-sm text-white cursor-pointer">
+                  {{item.name}}
+                </li>
+              </app-tooltip>
+              }
+            </ul>
+          </div>
+        </div>
+
+        <div class="flex gap-4 mt-6">
+          <button type="button"
+            class="border border-gray-600 hover:border-gray-500 px-6 py-2 rounded-lg font-medium transition-all duration-200"
+            (click)="goBack()">
+            Voltar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+}

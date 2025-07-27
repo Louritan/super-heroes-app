@@ -16,11 +16,19 @@ export const routes: Routes = [
   },
   {
     path: 'heroes/new',
-    loadComponent: () => import('./components/new-hero/new-hero').then(m => m.NewHero)
+    loadComponent: () => import('./components/hero-form/hero-form').then(m => m.HeroForm)
+  },
+  {
+    path: 'heroes/:id',
+    loadComponent: () => import('./components/hero-form/hero-form').then(m => m.HeroForm)
+  },
+  {
+    path: 'heroes/:id/details',
+    loadComponent: () => import('./components/hero-details/hero-details').then(m => m.HeroDetails)
   },
   {
     path: 'powers/new',
-    loadComponent: () => import('./components/new-power/new-power').then(m => m.NewPower)
+    loadComponent: () => import('./components/power-form/power-form').then(m => m.PowerForm)
   },
   // {
   //   path: 'heroes/:id',

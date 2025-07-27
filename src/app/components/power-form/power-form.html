@@ -45,10 +45,15 @@
         <div class="flex gap-4">
           <button
             type="submit"
-            syle="border-radius: 12px"
-            class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-6 py-2 rounded-lg font-medium transition-all duration-200"
-            (click)="postSuperPower()"
+            class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-6 py-2 rounded-lg font-medium transition-all duration-200 flex items-center justify-center gap-2"
+            (click)="handleSubmit()"
+            [disabled]="submitting"
           >
+            @if (submitting) {
+              <div
+                class="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"
+              ></div>
+            }
             Cadastrar Poder
           </button>
           <button
