@@ -1,0 +1,24 @@
+<header class="gradient-card flex items-center justify-between p-4 shadow-md" style="border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+  <div class="flex items-center gap-4">
+    <div class="gradient-hero p-2 h-18 w-18 flex items-center justify-center rounded-xl">
+      <lucide-icon [img]="Shield" class="h-12 w-12"></lucide-icon>
+    </div>
+    <div class="flex flex-col h-18 justify-between">
+      <span class="text-3xl bg-gradient-to-br from-blue-600 to-blue-300 bg-clip-text text-transparent font-bold">Hero
+        Vault!</span>
+      <span class="text-md text-muted-foreground">Welcome to the Hero Vault!</span>
+    </div>
+  </div>
+
+  <nav class="flex h-full gap-4">
+  @for (item of navItems; track $index) {
+    <a [routerLink]="item.path" style="text-decoration: none;"
+       [class]="isActive(item.path) ? 'bg-blue-600 text-white shadow-hero' : 'text-muted-foreground'"
+       class="flex items-center gap-2 text-xl rounded-lg hover:cursor-pointer hover:bg-gray-700 hover:shadow-md transition-all duration-200 py-2 px-4">
+      <lucide-icon [img]="item.icon" class="h-6 w-6"></lucide-icon>
+      {{ item.label }}
+    </a>
+  }
+</nav>
+
+</header>

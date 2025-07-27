@@ -1,0 +1,80 @@
+<main class="py-10 px-20 overflow-x-hidden">
+  <div class="flex flex-col gap-2 mb-10">
+    <div
+      class="text-4xl font-bold bg-gradient-to-br from-[hsl(220,100%,50%)] to-[hsl(220,100%,70%)] bg-clip-text text-transparent">
+      Lista de heróis</div>
+    <div class="text-lg text-muted-foreground">Gerencie todos os super-heróis cadastrados no sistema</div>
+  </div>
+  <div class="gradient-card flex items-center justify-between p-4 shadow-md rounded-xl"
+    style="border: 1px solid rgba(255, 255, 255, 0.1);">
+    <div class="relative w-2/5">
+
+      <lucide-icon [img]="Search"
+        class="h-4 w-4 text-muted-foreground absolute left-2 top-1/2 transform -translate-y-1/2"></lucide-icon>
+
+      <input type="text" (input)="filterHeroes($event)" placeholder="Pesquisar por nome, herói ou superpoder..."
+        class="w-full input-hero-focus rounded-lg pl-10 pr-2 py-2 text-muted-foreground"
+        style="background-color: hsl(224 15% 15%); border: 1px solid rgba(255, 255, 255, 0.1);" />
+    </div>
+    <div class="text-lg text-muted-foreground">
+      {{ filteredHeroes.length }} de {{ totalHeroes }} heróis
+    </div>
+  </div>
+
+  <div class="mt-10 gap-6">
+    @if (totalHeroes === 0) {
+    <div class="text-6xl mb-4 text-center">🦸‍♂️</div>
+    <div class="text-center text-2xl text-muted-foreground col-span-full">
+      Nenhum herói cadastrado ainda.
+    </div>
+    <div class="text-center text-lg mt-4 text-muted-foreground col-span-full">
+      Comece criando seu primeiro super-herói para formar sua liga.
+    </div>
+    }
+    @else if(filteredHeroes.length === 0) {
+    <div class="text-6xl mb-4 text-center">🦸‍♀️</div>
+    <div class="text-center text-2xl text-muted-foreground col-span-full">
+      Nenhum herói encontrado para "{{ search }}"
+    </div>
+    <div class="text-center text-lg mt-4 text-muted-foreground col-span-full">
+      Tente ajustar sua busca ou crie um novo super-herói.
+    </div>
+    }
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      @for (hero of filteredHeroes; track $index) {
+      <div class="gradient-card flex flex-col p-4 shadow-md rounded-xl hero-card-hover transition-hero"
+        style="border: 1px solid rgba(255, 255, 255, 0.1);">
+        <div class="flex items-center justify-between">
+          <h3>{{hero.heroName}}</h3>
+          <div class="flex items-center gap-4">
+            <div class="h-6 w-6 cursor-pointer eye-icon"
+              style="mask: url('eye.svg') no-repeat center; mask-size: contain; -webkit-mask: url('eye.svg') no-repeat center; -webkit-mask-size: contain;">
+            </div>
+            <div class="h-6 w-6 cursor-pointer edit-icon"
+              style="mask: url('square-pen.svg') no-repeat center; mask-size: contain; -webkit-mask: url('square-pen.svg') no-repeat center; -webkit-mask-size: contain;">
+            </div>
+            <div class="h-6 w-6 cursor-pointer delete-icon"
+              style="mask: url('trash-2.svg') no-repeat center; mask-size: contain; -webkit-mask: url('trash-2.svg') no-repeat center; -webkit-mask-size: contain;">
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <lucide-icon [img]="User" class="h-4 w-4 text-muted-foreground"></lucide-icon>
+          <div class="text-muted-foreground text-lg">{{hero.name}}</div>
+        </div>
+        <div class="mt-2">
+          <div class="text-muted-foreground text-xl font-bold mb-2">Superpoderes</div>
+          <ul class="flex gap-2 p-0">
+            @for (item of hero.superPowers; track $index) {
+            <li class="gradient-hero px-2 py-1 rounded-xl text-sm text-white">
+              {{item.name}}
+            </li>
+            }
+          </ul>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</main>

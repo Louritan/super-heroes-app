@@ -1,0 +1,219 @@
+{
+  "superHeroes": [
+    {
+      "id": 1,
+      "name": "Peter Parker",
+      "heroName": "Spider-Man",
+      "superPowers": [
+        {
+          "id": 1,
+          "superPower": "Super Força",
+          "description": "Força sobre-humana proporcional à de uma aranha"
+        },
+        {
+          "id": 2,
+          "superPower": "Sentido Aranha",
+          "description": "Capacidade de detectar perigos iminentes"
+        },
+        {
+          "id": 3,
+          "superPower": "Aderência",
+          "description": "Capacidade de grudar em qualquer superfície"
+        }
+      ],
+      "birthDate": "2001-08-10T00:00:00.000Z",
+      "height": 175,
+      "weight": 76
+    },
+    {
+      "id": 2,
+      "name": "Clark Kent",
+      "heroName": "Superman",
+      "superPowers": [
+        {
+          "id": 4,
+          "superPower": "Super Força",
+          "description": "Força virtualmente ilimitada"
+        },
+        {
+          "id": 5,
+          "superPower": "Voo",
+          "description": "Capacidade de voar em alta velocidade"
+        },
+        {
+          "id": 6,
+          "superPower": "Visão de Calor",
+          "description": "Raios de energia térmica emitidos pelos olhos"
+        },
+        {
+          "id": 7,
+          "superPower": "Invulnerabilidade",
+          "description": "Resistência a praticamente todos os tipos de dano"
+        }
+      ],
+      "birthDate": "1978-02-29T00:00:00.000Z",
+      "height": 190,
+      "weight": 95
+    },
+    {
+      "id": 3,
+      "name": "Bruce Wayne",
+      "heroName": "Batman",
+      "superPowers": [
+        {
+          "id": 8,
+          "superPower": "Inteligência Genial",
+          "description": "Intelecto superior e habilidades de detetive"
+        },
+        {
+          "id": 9,
+          "superPower": "Artes Marciais",
+          "description": "Mestre em várias formas de combate"
+        },
+        {
+          "id": 10,
+          "superPower": "Tecnologia Avançada",
+          "description": "Acesso a equipamentos e veículos de alta tecnologia"
+        }
+      ],
+      "birthDate": "1972-02-19T00:00:00.000Z",
+      "height": 188,
+      "weight": 95
+    },
+    {
+      "id": 4,
+      "name": "Diana Prince",
+      "heroName": "Wonder Woman",
+      "superPowers": [
+        {
+          "id": 11,
+          "superPower": "Super Força",
+          "description": "Força divina concedida pelos deuses"
+        },
+        {
+          "id": 12,
+          "superPower": "Voo",
+          "description": "Capacidade de voar"
+        },
+        {
+          "id": 13,
+          "superPower": "Laço da Verdade",
+          "description": "Laço mágico que força a verdade"
+        },
+        {
+          "id": 14,
+          "superPower": "Imortalidade",
+          "description": "Vida extremamente longa"
+        }
+      ],
+      "birthDate": "1976-03-22T00:00:00.000Z",
+      "height": 183,
+      "weight": 74
+    },
+    {
+      "id": 5,
+      "name": "Barry Allen",
+      "heroName": "Flash",
+      "superPowers": [
+        {
+          "id": 15,
+          "superPower": "Super Velocidade",
+          "description": "Velocidade mais rápida que a luz"
+        },
+        {
+          "id": 16,
+          "superPower": "Viagem no Tempo",
+          "description": "Capacidade de viajar através do tempo"
+        },
+        {
+          "id": 17,
+          "superPower": "Faseamento",
+          "description": "Vibrar através de objetos sólidos"
+        }
+      ],
+      "birthDate": "1989-05-13T00:00:00.000Z",
+      "height": 180,
+      "weight": 82
+    },
+    {
+      "id": 6,
+      "name": "Tony Stark",
+      "heroName": "Iron Man",
+      "superPowers": [
+        {
+          "id": 18,
+          "superPower": "Inteligência Genial",
+          "description": "Intelecto superior em engenharia e tecnologia"
+        },
+        {
+          "id": 19,
+          "superPower": "Armadura Tecnológica",
+          "description": "Armadura com múltiplas funcionalidades"
+        },
+        {
+          "id": 20,
+          "superPower": "Voo",
+          "description": "Voo através dos propulsores da armadura"
+        }
+      ],
+      "birthDate": "1970-05-29T00:00:00.000Z",
+      "height": 185,
+      "weight": 90
+    },
+    {
+      "id": 7,
+      "name": "Natasha Romanoff",
+      "heroName": "Black Widow",
+      "superPowers": [
+        {
+          "id": 21,
+          "superPower": "Espionagem",
+          "description": "Habilidades superiores de espionagem e infiltração"
+        },
+        {
+          "id": 22,
+          "superPower": "Artes Marciais",
+          "description": "Especialista em combate corpo a corpo"
+        },
+        {
+          "id": 23,
+          "superPower": "Agilidade Aprimorada",
+          "description": "Agilidade e reflexos acima da média"
+        }
+      ],
+      "birthDate": "1984-12-03T00:00:00.000Z",
+      "height": 170,
+      "weight": 59
+    },
+    {
+      "id": 8,
+      "name": "Steve Rogers",
+      "heroName": "Captain America",
+      "superPowers": [
+        {
+          "id": 24,
+          "superPower": "Super Força",
+          "description": "Força aprimorada pelo soro do super soldado"
+        },
+        {
+          "id": 25,
+          "superPower": "Agilidade Aprimorada",
+          "description": "Agilidade e velocidade sobre-humanas"
+        },
+        {
+          "id": 26,
+          "superPower": "Escudo Vibranium",
+          "description": "Escudo indestrutível de vibranium"
+        },
+        {
+          "id": 27,
+          "superPower": "Liderança",
+          "description": "Habilidades naturais de liderança e estratégia"
+        }
+      ],
+      "birthDate": "1918-07-04T00:00:00.000Z",
+      "height": 188,
+      "weight": 100
+    }
+  ]
+}

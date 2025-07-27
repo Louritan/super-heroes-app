@@ -1,0 +1,65 @@
+<main class="flex flex-col items-center p-10">
+  <div class="w-full max-w-4xl">
+    <button
+      type="button"
+      class="flex items-center gap-2"
+      (click)="goBack()"
+    >
+      <div class="h-4 w-4 arrow-icon"
+        style="mask: url('arrow-left.svg') no-repeat center; mask-size: contain; -webkit-mask: url('arrow-left.svg') no-repeat center; -webkit-mask-size: contain;">
+      </div>
+      Voltar
+    </button>
+    <div class="flex items-center justify-center">
+      <div class="bg-gradient-to-br from-blue-600 to-fuchsia-400 bg-clip-text text-transparent font-bold text-3xl">
+        Cadastrar Novo Poder
+      </div>
+    </div>
+    <div class="mt-6 flex flex-col items-start gradient-card rounded-xl p-6 shadow-md justify-center"
+      style="border: 1px solid rgba(255, 255, 255, 0.1);">
+      <div class="text-xl font-bold mb-4">
+        Informações do Poder
+      </div>
+      <form class="w-full space-y-6">
+        <div class="flex flex-col gap-1 w-full">
+          <label for="power-name" class="block font-medium">Nome</label>
+          <input
+            type="text"
+            name="power-name"
+            placeholder="Ex: Super Força"
+            class="w-full input-hero-focus rounded-lg p-2 text-white placeholder-gray-400"
+            style="background-color: hsl(224 15% 15%); border: 1px solid rgba(255, 255, 255, 0.1);"
+            [(ngModel)]="superPower.name"
+          />
+        </div>
+        <div class="flex flex-col gap-1 w-full">
+          <label for="power-description" class="block font-medium">Descrição</label>
+          <textarea
+            name="power-description"
+            style="background-color: hsl(224 15% 15%); border: 1px solid rgba(255, 255, 255, 0.1); resize: none"
+            class="w-full h-40 input-hero-focus rounded-lg p-2 text-white placeholder-gray-400"
+            placeholder="Ex: Capacidade física sobre-humana que permite levantar, empurrar ou destruir objetos de grande porte com facilidade. Um herói com super força pode, por exemplo, erguer carros, romper paredes de concreto, saltar grandes distâncias com impulso muscular e enfrentar múltiplos inimigos ao mesmo tempo sem esforço físico significativo. A intensidade da força pode variar conforme o nível do herói ou suas limitações específicas."
+            [(ngModel)]="superPower.description"
+          ></textarea>
+        </div>
+        <div class="flex gap-4">
+          <button
+            type="submit"
+            syle="border-radius: 12px"
+            class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-6 py-2 rounded-lg font-medium transition-all duration-200"
+            (click)="postSuperPower()"
+          >
+            Cadastrar Poder
+          </button>
+          <button
+            type="button"
+            class="border border-gray-600 hover:border-gray-500 px-6 py-2 rounded-lg font-medium transition-all duration-200"
+            (click)="goBack()"
+          >
+            Cancelar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
