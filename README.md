@@ -78,6 +78,29 @@ export const environment = {
 };
 ```
 
+## 📸 Screenshots
+
+### Página Inicial
+![Home](assets/home.png)
+
+### Lista de Heróis
+![Lista de Heróis](assets/hero-list.png)
+
+### Formulário de Herói
+![Formulário de Herói](assets/hero-form.png)
+
+### Edição de Herói
+![Edição de Herói](assets/edit-hero-form.png)
+
+### Detalhes do Herói
+![Detalhes do Herói](assets/hero-details.png)
+
+### Formulário de Poder
+![Formulário de Poder](assets/power-form.png)
+
+### Modal de Exclusão
+![Modal de Exclusão](assets/delete-hero-modal.png)
+
 ## 🎨 Estilos
 
 Os estilos da aplicação são geridos via Tailwind CSS, garantindo uma abordagem moderna e responsiva.
