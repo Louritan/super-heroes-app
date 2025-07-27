@@ -76,7 +76,7 @@
             <div class="text-muted-foreground text-xl font-bold mb-2">Superpoderes</div>
             <ul class="flex gap-2 p-0">
               @for (item of hero.superPowers; track $index) {
-                <li class="gradient-hero px-2 py-1 rounded-xl text-sm text-white">
+                <li class="gradient-hero px-2 py-1 rounded-xl text-sm text-white cursor-pointer">
                   {{item.name}}
                 </li>
               }
